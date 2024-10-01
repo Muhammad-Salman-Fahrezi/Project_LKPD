@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LKPD NO 5</title>
+    <style>
+        .button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            position: fixed;
+            top: 57%;
+            left: 40%;
+        }
+
+        .button:hover {
+            background-color: #3e8e41;
+        }
+        
+        .countdown {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: red;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            color: white;
+        }
+        
+        .countdown.show {
+            display: block;
+        }
+        
+        .countdown span {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <button class="button" id="myButton">Munculkan Alert</button>
+    </div>
+    <div class="countdown" id="countdown">
+        <p><span font-weight:bold;>Danger !</span> Alert akan tertutup dalam -   
+        <span id="count" >5</span>
+        </p>
+    </div>
+
+    <script>
+        document.getElementById("myButton").addEventListener("click", function() {
+            let count = 5;
+            let countdownElement = document.getElementById("countdown");
+            countdownElement.classList.add("show");
+            let interval = setInterval(function() {
+                document.getElementById("count").innerText = count;
+                count--;
+                if (count <= 0) {
+                    clearInterval(interval);
+                    countdownElement.classList.remove("show");
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

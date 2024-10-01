@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal Tabel HTML</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    input[readonly] {
+            font-weight: bold;
+            background-color: #f0f0f0; 
+            border: 1px solid #ccc;
+    }
+</style>
+<body>
+    <table border="1">
+        <tr>
+            <th>No.</th>
+            <th>Keterangan</th>
+            <th>Bersedia Membayar</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td >Bersedia membayar Dana Sumbangan Pembagunan (DSP) Sebesar Rp. 8.500.000 dengan mekanisme <br>Pembayaran Dana Sumbangan Pendidikan</td>
+            <td ><input type="radio">Lunas saat Daftar Ulang <br>
+            <input type="radio">60% dibayarkan saat daftar ulang dan sisanya dibayarkan tanggal 13 juli 2024
+            </td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Bersedia membayar sumbangan Penyelenggaraan Pendidikan (SPP) secara rutin setiap bulan sebesar Rp. 550.000 <br>yang dibayarkan sebelum tanggal 10 setiap bulannya kecuali bulan juli 2024.</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td rowspan="2">3.</td>
+            <td>Pembayaran lainnya. <br> <br>Setelah putra/putri kali diterima di SMK Wikrama Bogot. Kami juga bersedia memberikan: <br><br>
+                a.Wakaf Pembangunan Mesjid Al-Ikram <br>
+            </td>
+            <td><input type="radio">Rp.300.000<br>
+            <input type="radio">Rp.500.000<br>
+            <input type="radio">Rp.1.000.000<br>
+            <input type="radio">Rp.2.000.000<br>
+            <input type="radio">Rp.5.000.000<br>
+            <input type="radio">> Rp.5.000.000 atau <input type="number"></td>
+        </tr>
+        <tr>
+            <td>b. Zakat Infaq dan Sodakoh secara rutin setiap bulan</td>
+            <td><input type="text" id="readonlyInput" value="Rp.20.000" readonly></td>
+        </tr>
+    </table>
+</body>
+</html>
